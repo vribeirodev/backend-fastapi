@@ -1,7 +1,15 @@
 # Backend FastAPI
 
 ## Descrição
-Projeto para gerenciar uma loja virtual, incluindo usuários, produtos e pedidos.
+Este projeto é uma aplicação backend para gerenciar uma loja virtual, utilizando FastAPI, PostgreSQL e RabbitMQ para processamento assíncrono de pedidos.
+
+## Tecnologias Utilizadas
+- Python 3.9
+- FastAPI
+- PostgreSQL
+- RabbitMQ
+- Celery
+- Docker e Docker Compose
 
 ## Pré-requisitos
 Certifique-se de ter os seguintes itens instalados em seu sistema:
