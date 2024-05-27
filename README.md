@@ -53,6 +53,6 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
    docker-compose run --rm test
 
 ## Documentação da API
-A documentação completa da API pode ser acessada através do Swagger/OpenAPI quando o servidor está em execução, disponível em [http://localhost:8000/docs](http://localhost:8000/docs).
+A documentação completa da API pode ser acessada através do Swagger/OpenAPI quando o servidor está em execução, disponível em [http://localhost:8000/docs](http://localhost:8000/docs) ou em [http://localhost:8000/redoc](http://localhost:8000/redoc).
 
 ![image](https://github.com/vribeirodev/backend-fastapi/assets/98496942/9346ea71-82fb-4385-a8fd-3d14e12b5de2)
