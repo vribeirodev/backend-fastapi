@@ -56,3 +56,56 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
 A documentação completa da API pode ser acessada através do Swagger/OpenAPI quando o servidor está em execução, disponível em [http://localhost:8000/docs](http://localhost:8000/docs) ou em [http://localhost:8000/redoc](http://localhost:8000/redoc).
 
 ![image](https://github.com/vribeirodev/backend-fastapi/assets/98496942/9346ea71-82fb-4385-a8fd-3d14e12b5de2)
+
+## Exemplos de Uso
+
+### Criar um novo usuário
+```bash
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "João da Silva",
+  "email": "joao.silva@example.com",
+  "password": "minhasenha123"
+}'
+```
+
+### Obter detalhes de um usuário por ID
+```bash
+curl -X 'GET' \
+  'http://localhost:8000/api/v1/users/1' \
+  -H 'accept: application/json'
+```
+
+### Criar um novo produto
+```bash
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/products/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Celular",
+  "description": "Smartphone com 64GB de armazenamento.",
+  "price": 1999.99,
+  "quantity_in_stock": 50
+}'
+```
+
+### Criar um novo pedido
+```bash
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/orders/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "user_id": 1,
+  "items": [
+    {
+      "product_id": 1,
+      "quantity": 2
+    }
+  ]
+}'
+```
