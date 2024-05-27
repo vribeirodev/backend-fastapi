@@ -52,6 +52,14 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
    ```bash
    docker-compose run --rm test
 
+## Contêineres
+Ao executar `docker-compose up`, os seguintes contêineres serão iniciados:
+- **web**: Servidor FastAPI rodando a aplicação web.
+- **db**: Servidor PostgreSQL para armazenamento de dados.
+- **rabbitmq**: Servidor RabbitMQ para enfileiramento de mensagens.
+- **celery**: Worker Celery para processamento assíncrono de tarefas.
+- **test**: Contêiner para execução de testes automatizados.
+
 ## Documentação da API
 A documentação completa da API pode ser acessada através do Swagger/OpenAPI quando o servidor está em execução, disponível em [http://localhost:8000/docs](http://localhost:8000/docs) ou em [http://localhost:8000/redoc](http://localhost:8000/redoc).
 
