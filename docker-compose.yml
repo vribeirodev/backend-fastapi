@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - rabbitmq
+    environment:
+      DATABASE_URL: postgresql://admin:masterkey@db/db_project
+    volumes:
+      - .:/project
+    working_dir: /project
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: masterkey
+      POSTGRES_DB: db_project
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data  
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  celery:
+    build: .
+    command: celery -A app.core.celery_app worker --loglevel=info
+    depends_on:
+      - db
+      - rabbitmq
+    environment:
+      DATABASE_URL: postgresql://admin:masterkey@db/db_project
+      CELERY_BROKER_URL: amqp://guest:guest@rabbitmq//
+      CELERY_RESULT_BACKEND: db+postgresql://admin:masterkey@db/db_project
+      CELERY_TASK_DEFAULT_QUEUE: "celery"  # Nome da fila padrão
+    volumes:
+      - .:/project
+    working_dir: /project
+
+  test:
+    build: .
+    command: pytest --cov=app --cov-report=term-missing
+    volumes:
+      - .:/project
+    environment:
+      DATABASE_URL: sqlite:///./test.db
+    depends_on:
+      - db
+      - rabbitmq
+
+volumes:
+  pgdata:
