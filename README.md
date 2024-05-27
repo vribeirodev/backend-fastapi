@@ -1,8 +1,19 @@
-# Backend FastAPI
+# Loja Virtual API - (Projeto Teste Backend)
 
 ## Descrição
-Este projeto é uma aplicação backend para gerenciar uma loja virtual, utilizando FastAPI, PostgreSQL e RabbitMQ para processamento assíncrono de pedidos.
+Este projeto é uma aplicação backend desenvolvida para gerenciar uma loja virtual. A aplicação foi construída utilizando Python e FastAPI, juntamente com PostgreSQL para armazenamento de dados e RabbitMQ para processamento assíncrono de pedidos. O objetivo principal é fornecer uma API robusta e eficiente para gerenciar usuários, produtos e pedidos, garantindo uma experiência fluida e confiável.
 
+## Funcionalidades Principais
+- **Gerenciamento de Usuários**: 
+  - Criar, listar e obter detalhes de usuários.
+- **Gerenciamento de Produtos**: 
+  - Criar, listar e obter detalhes de produtos.
+- **Gerenciamento de Pedidos**: 
+  - Criar e listar pedidos por usuário.
+- **Processamento Assíncrono de Pedidos**: 
+  - Uso de RabbitMQ para enfileirar pedidos.
+  - Uso de Celery para processamento assíncrono de pedidos.
+    
 ## Tecnologias Utilizadas
 - Python
 - FastAPI
@@ -41,6 +52,7 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
    ```bash
    docker-compose run --rm test
 
-## Uso
-Com o container web em execução acesse a documentação interativa da API no navegador:
-http://localhost:8000/docs
+## Documentação da API
+A documentação completa da API pode ser acessada através do Swagger/OpenAPI quando o servidor está em execução, disponível em [http://localhost:8000/docs](http://localhost:8000/docs).
+
+![image](https://github.com/vribeirodev/backend-fastapi/assets/98496942/9346ea71-82fb-4385-a8fd-3d14e12b5de2)
