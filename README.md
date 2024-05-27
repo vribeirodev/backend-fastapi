@@ -29,6 +29,10 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
    ```bash
    docker-compose up -d --remove-orphans --build
 
+5. Execute os testes:
+   ```bash
+   docker-compose run --rm test
+
 ## Uso
 Acesse a documentação interativa da API no navegador:
 http://localhost:8000/docs
