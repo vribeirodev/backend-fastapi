@@ -28,6 +28,31 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
+## Estrutura do Projeto
+```plaintext
+.
+├── alembic                     # Ferramenta de migração de banco de dados
+│   ├── versions                # Arquivos de migração
+├── app
+│   ├── api                     # Definição das rotas da API
+│   ├── core                    # Configurações principais e inicialização
+│   ├── db                      # Configurações e modelos do banco de dados
+│   ├── models                  # Definições dos modelos do banco de dados
+│   ├── schemas                 # Esquemas de validação dos dados
+│   ├── services                # Lógica de negócios e serviços
+│   ├── worker                  # Configuração do Celery
+│   ├── initial_data.py         # Script para inicialização de dados
+│   └── main.py                 # Ponto de entrada da aplicação
+├── tests                       # Testes automatizados
+├── .gitignore                  # Arquivos a serem ignorados pelo Git
+├── alembic.ini                 # Configurações do Alembic
+├── docker-compose.yml          # Arquivo de configuração do Docker Compose
+├── Dockerfile                  # Arquivo de configuração do Docker
+├── README.md                   # Documentação do projeto
+├── requirements.txt            # Dependências do projeto
+
+```
+
 ## Instalação
 1. Clone o repositório:
    ```bash
