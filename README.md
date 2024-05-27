@@ -34,6 +34,5 @@ Certifique-se de ter os seguintes itens instalados em seu sistema:
    docker-compose run --rm test
 
 ## Uso
-Acesse a documentação interativa da API no navegador:
+Com o container web em execução acesse a documentação interativa da API no navegador:
 http://localhost:8000/docs
-   
