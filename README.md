@@ -1,7 +1,7 @@
 # Loja Virtual API - (Projeto Teste Backend)
 
 ## Descrição
-Este projeto é uma aplicação backend desenvolvida para gerenciar uma loja virtual. A aplicação foi construída utilizando Python e FastAPI, juntamente com PostgreSQL para armazenamento de dados e RabbitMQ para processamento assíncrono de pedidos. O objetivo principal é fornecer uma API robusta e eficiente para gerenciar usuários, produtos e pedidos, garantindo uma experiência fluida e confiável.
+Este projeto é uma aplicação backend desenvolvida para gerenciar uma loja virtual. A aplicação foi construída utilizando Python e FastAPI, juntamente com PostgreSQL para armazenamento de dados e RabbitMQ para processamento assíncrono de pedidos.
 
 ## Funcionalidades Principais
 - **Gerenciamento de Usuários**: 
