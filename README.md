@@ -1,0 +1,35 @@
+# Backend FastAPI
+
+## Descrição
+Projeto para gerenciar uma loja virtual, incluindo usuários, produtos e pedidos.
+
+## Pré-requisitos
+Certifique-se de ter os seguintes itens instalados em seu sistema:
+- [Python 3.8+](https://www.python.org/downloads/)
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+## Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/vribeirodev/backend-fastapi.git
+   cd backend-fastapi
+
+2. Configure o ambiente virtual:
+   ```bash
+   python -m venv env
+   source env/bin/activate # Linux/macOS
+   env\scripts\activate # Windows
+
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+
+4. Configure o Docker e rode os containers:
+   ```bash
+   docker-compose up -d --remove-orphans --build
+
+## Uso
+Acesse a documentação interativa da API no navegador:
+http://localhost:8000/docs
+   
